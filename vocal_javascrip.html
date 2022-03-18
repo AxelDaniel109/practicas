@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> la letra dada es una vocal o consonante</title>
+    <link rel="stylesheet"  type="text/css" href="css\bootstrap.min.css">
+  </head>
+  <body>
+    <a href="practicas.php" class="nav-link">
+      <svg class="bi" width="20" height="19" fill="currentColor">
+       <use xlink:href="main/icons/bootstrap-icons.svg#archive"/>
+     </svg> practicas</a>
+  <form action="" method="post">
+    <input type="text" id="letra" name="letra" placeholder="ingresa la letra " required>
+    <input type="submit" value="validar" name="validando" onclick="Validar();">
+  </form>
+  <script>
+    function Validar(){
+     letras = document.getElementById("letra").value;
+       if(letras==""){
+alert("Ingresa por favor una letra en el campo vacio ");
+       }
+       else {
+         if (!isNaN(letras)) {
+           alert("Nesito una letra no un numero");
+         }
+         else {
+          switch (letras) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+          alert("la letra que pusite es:" +letras+ "es una vocal");
+          break;
+          default:
+            alert("la letra que pusite es: " +letras+ " es consonante");
+          }
+         }
+       }
+    }
+
+  </script>
+  <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
